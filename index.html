@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Preetham A - Software Engineer & Electronics Engineer. Showcasing projects, technical skills, and experience in a retro pixel art style." />
+  <meta name="author" content="Preetham A" />
+  <title>Preetham A | Software Engineer Portfolio</title>
+
+  <!-- Google Fonts: Retro Pixel Art & Arcade Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Pixel Art Stylesheet with CSS Media Query Night Mode Detection -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================================================= -->
+  <!-- ACCESSIBILITY: SKIP TO CONTENT LINK                       -->
+  <!-- ========================================================= -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Mobile Backdrop Overlay when sidebar is open -->
+  <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- ========================================================= -->
+  <!-- VERTICAL NAVIGATION BAR (LEFT SIDE OF SCREEN)             -->
+  <!-- Accessible, responsive, pixel art styled navigation       -->
+  <!-- ========================================================= -->
+  <aside id="vertical-sidebar" class="pixel-sidebar" aria-label="Main Navigation">
+    
+    <!-- Sidebar Header & Player Badge -->
+    <div class="sidebar-header">
+      <a href="#hero" class="sidebar-logo" aria-label="Preetham Portfolio Home">
+        <span>&#9654;</span> PREETHAM.DEV
+      </a>
+      <div class="sidebar-hud-meta">
+        <span class="sidebar-player-tag">PLAYER 1</span>
+        <span>LVL 2026</span>
+      </div>
+    </div>
+
+    <!-- Vertical Navigation Menu -->
+    <nav class="sidebar-nav" aria-label="Directory Menu">
+      <div class="sidebar-menu-title">&gt; SELECT QUEST</div>
+      <ul class="sidebar-menu" role="menu">
+        <li role="none">
+          <a href="#hero" class="sidebar-link active" role="menuitem" aria-current="page">
+            <span class="link-arrow" aria-hidden="true">&#9654;</span>
+            <span class="link-badge">[01]</span>
+            <span class="link-text">Home</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#about" class="sidebar-link" role="menuitem">
+            <span class="link-arrow" aria-hidden="true">&#9654;</span>
+            <span class="link-badge">[02]</span>
+            <span class="link-text">About Me</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#skills" class="sidebar-link" role="menuitem">
+            <span class="link-arrow" aria-hidden="true">&#9654;</span>
+            <span class="link-badge">[03]</span>
+            <span class="link-text">Skills</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#timeline" class="sidebar-link" role="menuitem">
+            <span class="link-arrow" aria-hidden="true">&#9654;</span>
+            <span class="link-badge">[04]</span>
+            <span class="link-text">Timeline</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#projects" class="sidebar-link" role="menuitem">
+            <span class="link-arrow" aria-hidden="true">&#9654;</span>
+            <span class="link-badge">[05]</span>
+            <span class="link-text">Projects</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#testimonials" class="sidebar-link" role="menuitem">
+            <span class="link-arrow" aria-hidden="true">&#9654;</span>
+            <span class="link-badge">[06]</span>
+            <span class="link-text">Testimonials</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#chat" class="sidebar-link" role="menuitem">
+            <span class="link-arrow" aria-hidden="true">&#9654;</span>
+            <span class="link-badge">[07]</span>
+            <span class="link-text">Chat</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#contact" class="sidebar-link" role="menuitem">
+            <span class="link-arrow" aria-hidden="true">&#9654;</span>
+            <span class="link-badge">[08]</span>
+            <span class="link-text">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer with Status -->
+    <div class="sidebar-footer">
+      <div class="sidebar-status-box">
+        <span>&#9679; STATUS: READY</span>
+        <span>HP 100%</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================= -->
+  <!-- TOP HEADER / STATUS BAR                                   -->
+  <!-- ========================================================= -->
+  <header id="site-header">
+    <div class="header-container">
+      <div class="header-left-group">
+        <!-- Mobile Sidebar Hamburger Toggle Button -->
+        <button 
+          id="mobile-sidebar-toggle" 
+          type="button" 
+          class="mobile-sidebar-toggle"
+          aria-label="Open Navigation Menu"
+          aria-expanded="false"
+          aria-controls="vertical-sidebar"
+        >
+          <span aria-hidden="true">&#9776;</span> MENU
+        </button>
+
+        <a href="#hero" class="brand-logo" aria-label="Home">
+          <span>&#9654;</span> PREETHAM.DEV
+        </a>
+      </div>
+
+      <!-- NIGHT / DAY MODE TOGGLE -->
+      <div class="theme-switch-wrapper">
+        <button 
+          id="theme-toggle" 
+          type="button" 
+          class="pixel-toggle-btn"
+          aria-label="Toggle Night or Day Mode"
+          title="Toggle Night or Day Mode"
+        >
+          <span class="toggle-icon-container" aria-hidden="true">
+            <span class="theme-icon-moon">&#9790;</span>
+            <span class="theme-icon-sun">&#9728;</span>
+          </span>
+          <span id="theme-toggle-label" class="toggle-label">MODE</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- MAIN CONTENT AREA                                         -->
+  <!-- ========================================================= -->
+  <main id="main-content">
+
+    <!-- ======================================================= -->
+    <!-- 1. HERO SECTION (PIXEL ART STYLE + BACKGROUND IMAGE)   -->
+    <!-- ======================================================= -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-container">
+
+        <!-- Hero Content Card -->
+        <div class="hero-content-card">
+          
+          <!-- System Status Bar -->
+          <div class="hero-status-bar">
+            <div class="status-badge">
+              <span class="blink-dot" aria-hidden="true"></span>
+              <span>STATUS: ONLINE &amp; READY</span>
+            </div>
+            <div class="hero-level-tag">
+              [CLASS: SOFTWARE ENGINEER]
+            </div>
+          </div>
+
+          <!-- Welcome Greetings, Title & Tagline -->
+          <p class="hero-greeting">&gt; WELCOME VISITOR_</p>
+          <h1 id="hero-title" class="hero-title">HELLO, I'M PREETHAM A</h1>
+          <p class="hero-subtitle">Software Engineer &amp; Tech Innovator</p>
+          
+          <p class="hero-tagline">
+            Bridging hardware intelligence with software craft. Passionate about Python, modern web development, and embedded systems to build high-impact real-world solutions.
+          </p>
+
+          <!-- Retro RPG Stats HUD -->
+          <div class="retro-stats-hud" aria-label="Developer Stats">
+            <div class="hud-stat-row">
+              <span class="hud-stat-label">CODE HP</span>
+              <div class="hud-bar-track">
+                <div class="hud-bar-fill hud-bar-hp" style="width: 100%;"></div>
+              </div>
+              <span class="hud-stat-value">100/100</span>
+            </div>
+
+            <div class="hud-stat-row">
+              <span class="hud-stat-label">TECH MP</span>
+              <div class="hud-bar-track">
+                <div class="hud-bar-fill hud-bar-mp" style="width: 92%;"></div>
+              </div>
+              <span class="hud-stat-value">92/100</span>
+            </div>
+          </div>
+
+          <!-- Pixel Call to Action Buttons -->
+          <div class="hero-actions">
+            <a href="#projects" class="pixel-btn pixel-btn-primary">
+              <span>&#9874;</span> EXPLORE QUESTS
+            </a>
+            <a href="#contact" class="pixel-btn pixel-btn-secondary">
+              <span>&#9993;</span> SUMMON ME
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Profile Art Frame -->
+        <div class="hero-visual-card">
+          <div class="pixel-avatar-frame">
+            <div class="avatar-frame-header">
+              <span class="avatar-label">PLAYER_1.PNG</span>
+              <div class="avatar-indicators">
+                <span class="dot-indicator dot-red"></span>
+                <span class="dot-indicator dot-yellow"></span>
+                <span class="dot-indicator dot-green"></span>
+              </div>
+            </div>
+
+            <div class="avatar-photo-wrapper">
+              <img 
+                src="hero-bg.jpeg" 
+                alt="Portrait of Preetham A" 
+                class="avatar-photo"
+              />
+            </div>
+
+            <div class="avatar-caption">
+              <span>&#9733;</span> PREETHAM A &bull; B.E. 2026 <span>&#9733;</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 2. ABOUT ME SECTION (CLEAN, MINIMALISTIC PIXEL ART)     -->
+    <!-- ======================================================= -->
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <div class="section-container">
+        <h2 id="about-title" class="section-title">About Me</h2>
+
+        <div class="about-grid">
+          
+          <!-- Left Column: Pixel Art Avatar Card -->
+          <div class="about-profile-card">
+            <div class="about-avatar-wrapper">
+              <img 
+                src="pixel-avatar.jpg" 
+                alt="16-bit Pixel Art Avatar of Preetham A" 
+                class="about-avatar-img pixelated"
+              />
+            </div>
+            <h3 class="about-profile-name">PREETHAM A</h3>
+            <p class="about-profile-role">&lt;Software Engineer /&gt;</p>
+
+            <ul class="about-meta-list">
+              <li class="about-meta-item">
+                <span>DEGREE</span>
+                <span class="about-meta-value">B.E. in ECE (2026)</span>
+              </li>
+              <li class="about-meta-item">
+                <span>FOCUS</span>
+                <span class="about-meta-value">Software &amp; Systems</span>
+              </li>
+              <li class="about-meta-item">
+                <span>STATUS</span>
+                <span class="about-meta-value" style="color: var(--pixel-secondary);">Available for Roles</span>
+              </li>
+              <li class="about-meta-item">
+                <span>LOCATION</span>
+                <span class="about-meta-value">Open to Remote / Relocate</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Bio, Career Highlights & Personal Interests -->
+          <div class="about-bio-container">
+            
+            <!-- Short Bio Paragraphs -->
+            <p class="about-lead-bio">
+              Hello! I'm an engineering graduate with a passion for building clean, dependable software and exploring the intersection between code and physical computing.
+            </p>
+            <p class="about-sub-bio">
+              With a background in Electronics and Communication Engineering, I combine hardware-level mental models with modern software practices. I take joy in writing clean Python code, developing intuitive web interfaces, and solving real-world challenges through disciplined engineering.
+            </p>
+
+            <!-- Cards Row: Career Highlights & Personal Interests -->
+            <div class="about-cards-row">
+              
+              <!-- Career Highlights Card -->
+              <div class="about-highlight-box">
+                <h3 class="highlight-box-title">
+                  <span>&#9733;</span> CAREER HIGHLIGHTS
+                </h3>
+                <ul class="highlight-points-list">
+                  <li>
+                    <strong>Embedded Automation:</strong> Designed and programmed an automated petrol dispensing system leveraging Arduino and sensors to optimize fueling accuracy.
+                  </li>
+                  <li>
+                    <strong>Software Engineering:</strong> Focused on clean algorithmic solutions, modular Python architecture, and semantic web development.
+                  </li>
+                  <li>
+                    <strong>Rigorous Foundation:</strong> Solid grounding in digital systems, signals, and computation through a Bachelor of Engineering curriculum (Class of 2026).
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Personal Interests Card -->
+              <div class="about-highlight-box">
+                <h3 class="highlight-box-title">
+                  <span>&#9830;</span> PERSONAL INTERESTS
+                </h3>
+                <ul class="highlight-points-list">
+                  <li>
+                    <strong>Hardware &amp; IoT Hacking:</strong> Experimenting with microcontrollers, sensor telemetry, and automation circuits.
+                  </li>
+                  <li>
+                    <strong>Retro &amp; Pixel Art Aesthetics:</strong> Appreciating classic 8-bit/16-bit design principles, vintage game mechanics, and minimalist interfaces.
+                  </li>
+                  <li>
+                    <strong>Continuous Learning:</strong> Exploring cloud systems, reading tech documentation, and refining software design patterns.
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Minimalist Stats Bar -->
+            <div class="about-stats" aria-label="Key Highlights">
+              <div class="stat-card">
+                <span class="stat-number">2026</span>
+                <span class="stat-label">Graduation Milestone</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">Python &amp; C</span>
+                <span class="stat-label">Core Languages</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">Arduino</span>
+                <span class="stat-label">Hardware Prototyping</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 3. SKILLS SECTION                                       -->
+    <!-- ======================================================= -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+      <div class="section-container">
+        <h2 id="skills-title" class="section-title">Skill Tree</h2>
+        <div class="skills-grid">
+
+          <article class="skill-category">
+            <h3 class="category-title">Programming</h3>
+            <ul class="skill-list">
+              <li>Python</li>
+              <li>C / Embedded C</li>
+              <li>JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="skill-category">
+            <h3 class="category-title">Frontend &amp; Web</h3>
+            <ul class="skill-list">
+              <li>HTML5 &amp; Semantic Web</li>
+              <li>CSS3 &amp; Retro / Pixel UI</li>
+              <li>Responsive Design</li>
+            </ul>
+          </article>
+
+          <article class="skill-category">
+            <h3 class="category-title">Core Engineering</h3>
+            <ul class="skill-list">
+              <li>Electronics &amp; Comm (ECE)</li>
+              <li>Arduino Microcontrollers</li>
+              <li>Sensor Integration</li>
+            </ul>
+          </article>
+
+          <article class="skill-category">
+            <h3 class="category-title">Tools &amp; Workflow</h3>
+            <ul class="skill-list">
+              <li>Git &amp; GitHub</li>
+              <li>VS Code</li>
+              <li>Hardware Prototyping</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 4. TIMELINE SECTION                                     -->
+    <!-- ======================================================= -->
+    <section id="timeline" class="section timeline-section" aria-labelledby="timeline-title">
+      <div class="section-container">
+        <h2 id="timeline-title" class="section-title">Milestones &amp; Timeline</h2>
+        <div class="timeline-container">
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-date">2026</span>
+              <span class="timeline-type">Education</span>
+            </div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Bachelor of Engineering (B.E.)</h3>
+              <h4 class="timeline-company">Electronics &amp; Communication Engineering</h4>
+              <p>
+                Strong academic foundation in electronics, embedded firmware, communication networks, and computer programming.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <span class="timeline-date">2026 - Present</span>
+              <span class="timeline-type">Status</span>
+            </div>
+            <div class="timeline-body">
+              <h3 class="timeline-role">Fresher &bull; Aspiring Software Engineer</h3>
+              <h4 class="timeline-company">Open to Opportunities</h4>
+              <p>
+                Building software projects, expanding web development capabilities, and applying engineering concepts to real-world applications.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 5. PROJECTS SECTION                                     -->
+    <!-- ======================================================= -->
+    <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+      <div class="section-container">
+        <h2 id="projects-title" class="section-title">Featured Quests &amp; Projects</h2>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" 
+                alt="Automatic Petrol Pump Project" 
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Automatic Petrol Pump</h3>
+              <p class="project-description">
+                Developed an automated petrol dispensing system using electronic components and Arduino. Programmed microcontrollers to control fuel dispensing and reduce manual overhead.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">Embedded C</span>
+                <span class="tech-tag">Sensors</span>
+                <span class="tech-tag">Automation</span>
+              </div>
+              <div class="project-links">
+                <a href="#contact" class="project-link">Inquire Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" 
+                alt="Pixel Art Web Portfolio" 
+                class="project-image"
+              />
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Pixel Art Engineer Portfolio</h3>
+              <p class="project-description">
+                Interactive retro 8-bit aesthetic portfolio with media query night mode detection, responsive layouts, vertical navigation bar, and semantic HTML5 architecture.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Media Queries</span>
+              </div>
+              <div class="project-links">
+                <a href="#hero" class="project-link">View Live</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 6. TESTIMONIALS SECTION (PARTY ENDORSEMENTS)            -->
+    <!-- ======================================================= -->
+    <section id="testimonials" class="section testimonials-section" aria-labelledby="testimonials-title">
+      <div class="section-container">
+        <h2 id="testimonials-title" class="section-title">Party Endorsements &amp; Testimonials</h2>
+        <div class="testimonials-grid">
+
+          <article class="testimonial-card">
+            <blockquote class="testimonial-quote">
+              "Preetham demonstrated great dedication during our embedded automation projects. His ability to integrate hardware with code was crucial in delivering our automated dispensing prototype."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-pixel-avatar" aria-hidden="true">&#9812;</div>
+              <div>
+                <h3 class="author-name">Project Mentor</h3>
+                <p class="author-role">Academic Project Guide</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <blockquote class="testimonial-quote">
+              "Quick learner with strong analytical ability. When encountering microcontroller edge cases, he methodically debugs both the circuit and the code logic until resolved."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-pixel-avatar" aria-hidden="true">&#9881;</div>
+              <div>
+                <h3 class="author-name">Lab Collaborator</h3>
+                <p class="author-role">ECE Engineering Peer</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card">
+            <blockquote class="testimonial-quote">
+              "Energetic fresher with an appetite for modern software paradigms. His enthusiasm for combining Python, web technologies, and systems engineering is truly commendable."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-pixel-avatar" aria-hidden="true">&#9733;</div>
+              <div>
+                <h3 class="author-name">Senior Developer</h3>
+                <p class="author-role">Tech Community Colleague</p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 7. CHAT SECTION (TERMINAL TRANSMISSION)                 -->
+    <!-- ======================================================= -->
+    <section id="chat" class="section chat-section" aria-labelledby="chat-title">
+      <div class="section-container">
+        <h2 id="chat-title" class="section-title">Terminal Transmission &amp; Chat</h2>
+        <p class="contact-intro">
+          Test interactive transmission protocols with Preetham's automated 8-bit AI assistant.
+        </p>
+
+        <div class="chat-terminal-container">
+          <!-- Terminal Header -->
+          <div class="terminal-header">
+            <div class="terminal-title">
+              <span>&#9654;</span> SYS_CHAT // PREETHAM_BOT_v1.0
+            </div>
+            <div class="terminal-window-buttons" aria-hidden="true">
+              <span class="terminal-btn-dot dot-red"></span>
+              <span class="terminal-btn-dot dot-yellow"></span>
+              <span class="terminal-btn-dot dot-green"></span>
+            </div>
+          </div>
+
+          <!-- Terminal Dialogue Body -->
+          <div id="terminal-body" class="terminal-body" role="log" aria-live="polite">
+            <div class="terminal-message">
+              <div class="terminal-msg-header msg-author-system">
+                <span>[PREETHAM_BOT]</span> <span>02:00:00</span>
+              </div>
+              <div class="terminal-msg-content">
+                Greetings, Player! I am Preetham's virtual terminal assistant. Select a quick query below or type a message to start transmitting.
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Prompts -->
+          <div class="terminal-quick-prompts">
+            <button type="button" class="prompt-pill" data-prompt="What is your primary tech stack?">
+              &gt; [1] Tech Stack?
+            </button>
+            <button type="button" class="prompt-pill" data-prompt="Are you available for employment / internships?">
+              &gt; [2] Availability?
+            </button>
+            <button type="button" class="prompt-pill" data-prompt="Tell me about the Petrol Pump project!">
+              &gt; [3] Petrol Pump Project?
+            </button>
+          </div>
+
+          <!-- Terminal Input Bar -->
+          <form id="terminal-form" class="terminal-input-bar">
+            <input 
+              type="text" 
+              id="terminal-input" 
+              class="terminal-input" 
+              placeholder="Type command or question (e.g., 'hello', 'skills')..." 
+              autocomplete="off"
+            />
+            <button type="submit" class="terminal-send-btn">
+              SEND &#9654;
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 8. CONTACT SECTION                                      -->
+    <!-- ======================================================= -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="section-container">
+        <h2 id="contact-title" class="section-title">Send a Transmission</h2>
+        <p class="contact-intro">
+          Looking for a passionate engineer? Send a direct transmission or connect via email.
+        </p>
+
+        <div class="contact-wrapper">
+          <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); alert('Message transmission initiated!');">
+            <div class="form-group">
+              <label for="contact-name">PLAYER NAME:</label>
+              <input type="text" id="contact-name" name="name" placeholder="Enter your name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">EMAIL ADDRESS:</label>
+              <input type="email" id="contact-email" name="email" placeholder="player@domain.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">TRANSMISSION MESSAGE:</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="State your quest or inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="pixel-btn pixel-btn-primary">TRANSMIT</button>
+          </form>
+
+          <div class="contact-info">
+            <div class="info-item">
+              <h3>DIRECT EMAIL</h3>
+              <p><a href="mailto:preethama954@gmail.com">preethama954@gmail.com</a></p>
+            </div>
+            <div class="info-item">
+              <h3>PHONE TRANSMISSION</h3>
+              <p><a href="tel:7676513716">7676513716</a></p>
+            </div>
+            <div class="info-item">
+              <h3>DEGREE &amp; LOCATION</h3>
+              <p>B.E. Electronics &amp; Communication (2026)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- FOOTER                                                    -->
+  <!-- ========================================================= -->
+  <footer id="site-footer">
+    <div class="footer-container">
+      <p class="footer-copyright">
+        &copy; 2026 PREETHAM A &bull; ALL RIGHTS RESERVED.
+      </p>
+
+      <ul class="footer-links">
+        <li><a href="#hero">&#9650; TOP</a></li>
+        <li><a href="mailto:preethama954@gmail.com">&#9993; EMAIL</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- CLIENT JAVASCRIPT: THEME & VERTICAL NAVBAR CONTROLS       -->
+  <!-- ========================================================= -->
+  <script>
+    (function() {
+      // 1. THEME TOGGLE (MEDIA QUERY POWERED + MANUAL OVERRIDE)
+      const toggleBtn = document.getElementById('theme-toggle');
+      const label = document.getElementById('theme-toggle-label');
+      const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function updateThemeLabel(isDark) {
+        if (label) {
+          label.textContent = isDark ? 'NIGHT' : 'DAY';
+        }
+      }
+
+      const savedTheme = localStorage.getItem('preetham_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeLabel(savedTheme === 'dark');
+      } else {
+        updateThemeLabel(darkModeMediaQuery.matches);
+      }
+
+      darkModeMediaQuery.addEventListener('change', (e) => {
+        if (!localStorage.getItem('preetham_theme')) {
+          updateThemeLabel(e.matches);
+        }
+      });
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const currentTheme = document.documentElement.getAttribute('data-theme');
+          const systemIsDark = darkModeMediaQuery.matches;
+          let nextTheme;
+          if (!currentTheme) {
+            nextTheme = systemIsDark ? 'light' : 'dark';
+          } else {
+            nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('preetham_theme', nextTheme);
+          updateThemeLabel(nextTheme === 'dark');
+        });
+      }
+
+      // 2. VERTICAL NAVBAR ACCESSIBILITY & MOBILE DRAWER LOGIC
+      const sidebar = document.getElementById('vertical-sidebar');
+      const mobileToggle = document.getElementById('mobile-sidebar-toggle');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+      function openSidebar() {
+        sidebar.classList.add('open');
+        backdrop.classList.add('active');
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        const firstLink = sidebar.querySelector('.sidebar-link');
+        if (firstLink) firstLink.focus();
+      }
+
+      function closeSidebar() {
+        sidebar.classList.remove('open');
+        backdrop.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+
+      if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+          const isOpen = sidebar.classList.contains('open');
+          if (isOpen) {
+            closeSidebar();
+          } else {
+            openSidebar();
+          }
+        });
+      }
+
+      if (backdrop) {
+        backdrop.addEventListener('click', closeSidebar);
+      }
+
+      // Close on Escape key
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sidebar.classList.contains('open')) {
+          closeSidebar();
+          mobileToggle.focus();
+        }
+      });
+
+      // Close mobile sidebar and handle active state on link click
+      sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          sidebarLinks.forEach(l => {
+            l.classList.remove('active');
+            l.removeAttribute('aria-current');
+          });
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+          if (window.innerWidth < 992) {
+            closeSidebar();
+          }
+        });
+      });
+
+      // Active link tracking on scroll (IntersectionObserver)
+      const sections = document.querySelectorAll('main section[id]');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            sidebarLinks.forEach(link => {
+              if (link.getAttribute('href') === `#${id}`) {
+                sidebarLinks.forEach(l => {
+                  l.classList.remove('active');
+                  l.removeAttribute('aria-current');
+                });
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'page');
+              }
+            });
+          }
+        });
+      }, { rootMargin: '-20% 0px -70% 0px' });
+
+      sections.forEach(section => observer.observe(section));
+
+      // 3. RETRO TERMINAL CHAT SIMULATOR
+      const terminalForm = document.getElementById('terminal-form');
+      const terminalInput = document.getElementById('terminal-input');
+      const terminalBody = document.getElementById('terminal-body');
+      const promptPills = document.querySelectorAll('.prompt-pill');
+
+      function appendTerminalMessage(author, isUser, message) {
+        const now = new Date().toTimeString().split(' ')[0];
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'terminal-message';
+        msgDiv.innerHTML = `
+          <div class="terminal-msg-header ${isUser ? 'msg-author-user' : 'msg-author-system'}">
+            <span>[${author}]</span> <span>${now}</span>
+          </div>
+          <div class="terminal-msg-content">${message}</div>
+        `;
+        terminalBody.appendChild(msgDiv);
+        terminalBody.scrollTop = terminalBody.scrollHeight;
+      }
+
+      function processBotReply(userText) {
+        const lower = userText.toLowerCase();
+        let reply = "Transmission received! Preetham will analyze this query. Feel free to send an email to preethama954@gmail.com for direct correspondence.";
+
+        if (lower.includes('stack') || lower.includes('skills')) {
+          reply = "Preetham's core technical weaponry includes Python, C/Embedded C, Arduino microcontrollers, HTML5/CSS3, and hardware-software system integration.";
+        } else if (lower.includes('avail') || lower.includes('job') || lower.includes('hire') || lower.includes('intern')) {
+          reply = "Preetham is graduating in 2026 with a B.E. in Electronics & Communication Engineering and is actively exploring Software Engineering & Embedded Systems roles!";
+        } else if (lower.includes('petrol') || lower.includes('pump') || lower.includes('project')) {
+          reply = "The Automatic Petrol Pump project is an Arduino-powered automated dispensing system that optimizes fuel dispensing precision and minimizes manual operations.";
+        } else if (lower.includes('hello') || lower.includes('hi') || lower.includes('hey')) {
+          reply = "Greetings, adventurer! Welcome to Preetham's portfolio station. What quest details would you like to explore?";
+        }
+
+        setTimeout(() => {
+          appendTerminalMessage('PREETHAM_BOT', false, reply);
+        }, 400);
+      }
+
+      if (terminalForm) {
+        terminalForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const text = terminalInput.value.trim();
+          if (!text) return;
+          appendTerminalMessage('YOU', true, text);
+          terminalInput.value = '';
+          processBotReply(text);
+        });
+      }
+
+      promptPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          const prompt = pill.getAttribute('data-prompt');
+          appendTerminalMessage('YOU', true, prompt);
+          processBotReply(prompt);
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
